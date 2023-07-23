@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class Write_File {
 
-public String getWriteFile(String fileName){
+public static String getWriteFile(String fileName){
     try {
-        Path file = Path.of(Constants.BASE_PATH_IN + fileName);
+        Path file = Path.of(Constants.BASE_PATH_IN + fileName + ".txt");
         Files.createFile(file);
         return "Файл створено. ";
     }catch (IOException e) {
